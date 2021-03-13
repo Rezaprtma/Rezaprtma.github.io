@@ -8,7 +8,7 @@
     <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous" />
     <!-- Bootstrap Icon -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.0/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.0/font/bootstrap-icons.css" />
     <!-- My CSS -->
     <link rel="stylesheet" href="css/style.css" />
 
@@ -16,7 +16,7 @@
   </head>
   <body id="home">
     <!-- Navbar -->
-    <nav class="navbar navbar-expand-lg navbar-dark bg-info shadow-sm fixed-top">
+    <nav class="navbar navbar-expand-lg navbar-dark shadow-sm fixed-top" style="background-color: #aeb0b6">
       <div class="container">
         <a class="navbar-brand" href="#">Reza</a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
@@ -24,10 +24,10 @@
         </button>
         <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
           <div class="navbar-nav ms-auto">
-            <a class="nav-link active" aria-current="page" href="#home">Home</a>
-            <a class="nav-link" href="#about">About</a>
-            <a class="nav-link" href="#projects">Projects</a>
-            <a class="nav-link" href="#contact">Contact</a>
+            <a class="nav-link active p5" aria-current="page" href="#home">Home</a>
+            <a class="nav-link p5" href="#about">About</a>
+            <a class="nav-link p5" href="#projects">Projects</a>
+            <a class="nav-link p5" href="#contact">Contact</a>
           </div>
         </div>
       </div>
@@ -35,13 +35,13 @@
     <!-- Akhir Navbar -->
 
     <!-- Jumbotron -->
-    <section class="jumbotron text-center">
-      <img src="img/hero.jpg" alt="Reza" width="200px" class="rounded-circle img-thumbnail" />
+    <section class="jumbotron text-center" style="background-color: #dde2e3">
+      <img src="img/hero.jpg" alt="Reza" width="200px" style="border: 6px solid #5c6272; border-radius: 50%; box-shadow: 0 0 10px 3px #9aacb8" class="" />
       <h1 class="display-4">Novian Reza</h1>
       <p class="lead">Student Lampung</p>
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
         <path
-          fill="#fff"
+          fill="#9aacb8"
           fill-opacity="1"
           d="M0,160L40,160C80,160,160,160,240,160C320,160,400,160,480,170.7C560,181,640,203,720,192C800,181,880,139,960,133.3C1040,128,1120,160,1200,149.3C1280,139,1360,85,1400,58.7L1440,32L1440,320L1400,320C1360,320,1280,320,1200,320C1120,320,1040,320,960,320C880,320,800,320,720,320C640,320,560,320,480,320C400,320,320,320,240,320C160,320,80,320,40,320L0,320Z"
         ></path>
@@ -50,13 +50,13 @@
     <!-- Akhir Jumbotron -->
 
     <!-- About -->
-    <section id="about">
+    <section id="about" style="background-color: #9aacb8">
       <div class="container">
         <div class="row text-center">
           <div class="col mb-5">
-            <h2>About Me</h2>
+            <h2 style="color: white; text-shadow: 1.5px 1.5px 2px white">About Me</h2>
           </div>
-          <div class="row justify-content-center fs-5 text-center">
+          <div class="row justify-content-center fs-5 text-center" style="color: rgb(214, 214, 214)">
             <div class="col-md-4 mb-3">Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic deleniti, nulla deserunt ad alias a! Harum error a vero ratione?</div>
             <div class="col-md-4">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nisi reprehenderit dolor dolores totam modi nihil id nostrum explicabo, quae excepturi blanditiis. Unde, deserunt optio reiciendis cum.</div>
           </div>
@@ -64,7 +64,7 @@
       </div>
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
         <path
-          fill="#e2edff"
+          fill="#5c6272"
           fill-opacity="1"
           d="M0,32L40,64C80,96,160,160,240,165.3C320,171,400,117,480,80C560,43,640,21,720,42.7C800,64,880,128,960,133.3C1040,139,1120,85,1200,64C1280,43,1360,53,1400,58.7L1440,64L1440,320L1400,320C1360,320,1280,320,1200,320C1120,320,1040,320,960,320C880,320,800,320,720,320C640,320,560,320,480,320C400,320,320,320,240,320C160,320,80,320,40,320L0,320Z"
         ></path>
@@ -73,13 +73,13 @@
     <!-- Akhir About -->
 
     <!-- Project -->
-    <section id="projects">
+    <section id="projects" style="background-color: #5c6272">
       <div class="container text-center">
         <div class="row">
           <div class="col mb-5">
-            <h2>My Projects</h2>
+            <h2 style="color: white; text-shadow: 1.5px 1.5px 2px white">My Projects</h2>
           </div>
-          <div class="row ">
+          <div class="row">
             <div class="col-md-4 mb-3">
               <div class="card">
                 <img src="img/projects/edit.jpg" class="card-img-top img-fluid" alt="projects-1" />
@@ -125,7 +125,7 @@
       </div>
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
         <path
-          fill="#fff"
+          fill="#3c455c"
           fill-opacity="1"
           d="M0,256L40,240C80,224,160,192,240,197.3C320,203,400,245,480,240C560,235,640,181,720,186.7C800,192,880,256,960,234.7C1040,213,1120,107,1200,96C1280,85,1360,171,1400,213.3L1440,256L1440,320L1400,320C1360,320,1280,320,1200,320C1120,320,1040,320,960,320C880,320,800,320,720,320C640,320,560,320,480,320C400,320,320,320,240,320C160,320,80,320,40,320L0,320Z"
         ></path>
@@ -134,79 +134,85 @@
     <!-- Akhir Project -->
 
     <!-- Contact -->
-    <section id="contact">
+    <section id="contact" style="background-color: #3c455c">
       <div class="container">
         <div class="row text-center mb-3">
           <div class="col">
-            <h2>Contact Me</h2>
+            <h2 style="color: white; text-shadow: 1.5px 1.5px 2px white">Contact Me</h2>
           </div>
         </div>
         <div class="row justify-content-center">
-            <div class="col-md-8">
-              <div class="alert alert-success alert-dismissible fade show d-none my-alert" role="alert">
-                <strong>Terima kasih!</strong> Pesan anda telah kami terima.
-                <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
-              </div>
-                <form name="contact-form">
-                    <div class="mb-3">
-                      <label for="name" class="form-label">Nama Lengkap</label>
-                      <input type="text" class="form-control" id="name" aria-describedby="name" name="nama">
-                    </div>
-                    <div class="mb-3">
-                      <label for="email" class="form-label">Email</label>
-                      <input type="email" class="form-control" id="email" aria-describedby="email" name="email">
-                  </form>
-                  <div class="mb-3">
-                    <label for="pesan" class="form-label">Pesan</label>
-                    <textarea class="form-control" id="pesan" rows="3" name="pesan"></textarea>
-                  </div>
-                  <button type="submit" class="btn btn-primary btn-kirim">kirim</button>
-
-                  <button class="btn btn-primary btn-loading d-none" type="button" disabled>
-                    <span class="spinner-grow spinner-grow-sm " role="status" aria-hidden="true"></span>
-                    Loading...
-                  </button>
+          <div class="col-md-8">
+            <div class="alert alert-success alert-dismissible fade show d-none my-alert" role="alert">
+              <strong>Terima kasih!</strong> Pesan anda telah kami terima.
+              <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
             </div>
+            <form name="contact-form">
+              <div class="mb-3">
+                <label for="name" class="form-label" style="color: white">Nama Lengkap</label>
+                <input type="text" class="form-control" id="name" aria-describedby="name" name="nama" />
+              </div>
+              <div class="mb-3">
+                <label for="email" class="form-label" style="color: white">Email</label>
+                <input type="email" class="form-control" id="email" aria-describedby="email" name="email" />
+              </div>
+            </form>
+            <div class="mb-3">
+              <label for="pesan" class="form-label" style="color: white">Pesan</label>
+              <textarea class="form-control" id="pesan" rows="3" name="pesan"></textarea>
+            </div>
+            <button type="submit" class="btn btn-primary btn-kirim">kirim</button>
+
+            <button class="btn btn-primary btn-loading d-none" type="button" disabled>
+              <span class="spinner-grow spinner-grow-sm" role="status" aria-hidden="true"></span>
+              Loading...
+            </button>
+          </div>
         </div>
       </div>
     </section>
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path fill="#0dcaf0" fill-opacity="1" d="M0,160L40,133.3C80,107,160,53,240,58.7C320,64,400,128,480,160C560,192,640,192,720,170.7C800,149,880,107,960,117.3C1040,128,1120,192,1200,218.7C1280,245,1360,235,1400,229.3L1440,224L1440,320L1400,320C1360,320,1280,320,1200,320C1120,320,1040,320,960,320C880,320,800,320,720,320C640,320,560,320,480,320C400,320,320,320,240,320C160,320,80,320,40,320L0,320Z"></path></svg>
+    <svg style="background-color: #3c455c" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
+      <path
+        fill="#2f3441"
+        fill-opacity="1"
+        d="M0,160L40,133.3C80,107,160,53,240,58.7C320,64,400,128,480,160C560,192,640,192,720,170.7C800,149,880,107,960,117.3C1040,128,1120,192,1200,218.7C1280,245,1360,235,1400,229.3L1440,224L1440,320L1400,320C1360,320,1280,320,1200,320C1120,320,1040,320,960,320C880,320,800,320,720,320C640,320,560,320,480,320C400,320,320,320,240,320C160,320,80,320,40,320L0,320Z"
+      ></path>
+    </svg>
     <!-- Akhir Contact -->
 
     <!-- footer -->
-    <footer class="bg-info text-white text-center pb-3">
-        <p>Created with <i class="bi bi-heart-fill text-primary"></i> by <a href="" class="text-white fw-bold">Novian Reza Pratama</a></p>
+    <footer class="text-white text-center pb-3" style="background-color: #2f3441">
+      <p>Created with <i class="bi bi-heart-fill text-danger"></i> by <a href="#" class="text-white fw-bold">Novian Reza Pratama</a></p>
     </footer>
     <!-- Akhir Footer -->
 
-
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js" integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0" crossorigin="anonymous"></script>
     <script>
-  const scriptURL = 'https://script.google.com/macros/s/AKfycbzPPU017HJYf93yyRuNyAWJLy6w97E67Yu60RAbeFncYavUm91peY5lMuOOAXlK1pC2dw/exec'
-  const form = document.forms['contact-form']
-  const btnKirim = document.querySelector('.btn-kirim')
-  const btnLoading = document.querySelector('.btn-loading')
-  const myAlert = document.querySelector('.my-alert')
+      const scriptURL = "https://script.google.com/macros/s/AKfycbzPPU017HJYf93yyRuNyAWJLy6w97E67Yu60RAbeFncYavUm91peY5lMuOOAXlK1pC2dw/exec";
+      const form = document.forms["contact-form"];
+      const btnKirim = document.querySelector(".btn-kirim");
+      const btnLoading = document.querySelector(".btn-loading");
+      const myAlert = document.querySelector(".my-alert");
 
-  form.addEventListener('submit', e => {
-    e.preventDefault();
-    // ketika submit di click
-    // loading tampil kirim hilang
-    btnLoading.classList.toggle('d-none');
-    btnKirim.classList.toggle('d-none');
-    fetch(scriptURL, { method: 'POST', body: new FormData(form)})
-      .then(response => {
-        // Tampilkan kirim hilangkan loading
-        btnLoading.classList.toggle('d-none');
-        btnKirim.classList.toggle('d-none');
-        // tampilkan alert
-        myAlert.classList.toggle('d-none');
-        // reset form
-        form.reset();
-        console.log('Success!', response)
-      })
-      .catch(error => console.error('Error!', error.message))
-  })
-</script>
+      form.addEventListener("submit", (e) => {
+        e.preventDefault();
+        // ketika submit di click
+        // loading tampil kirim hilang
+        btnLoading.classList.toggle("d-none");
+        btnKirim.classList.toggle("d-none");
+        fetch(scriptURL, { method: "POST", body: new FormData(form) })
+          .then((response) => {
+            // Tampilkan kirim hilangkan loading
+            btnLoading.classList.toggle("d-none");
+            btnKirim.classList.toggle("d-none");
+            // tampilkan alert
+            myAlert.classList.toggle("d-none");
+            // reset form
+            form.reset();
+            console.log("Success!", response);
+          })
+          .catch((error) => console.error("Error!", error.message));
+      });
+    </script>
   </body>
 </html>

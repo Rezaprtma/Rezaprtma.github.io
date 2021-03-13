@@ -1,6 +1,5 @@
 .jumbotron {
   padding-top: 6rem;
-  background-color: #e2edff;
 }
 
 .jumbotron h1 {
@@ -11,10 +10,25 @@
   background-color: #e2edff;
 }
 
+.card-body {
+  background-color: #aeb0b6;
+}
+.card-text {
+  color: #fff;
+}
+
 section {
   padding-top: 5rem;
 }
 
 a {
   text-decoration: none;
+}
+
+.p5 {
+  margin-right: 20px;
+}
+
+.form-svg {
+  width: 100%;
 }
