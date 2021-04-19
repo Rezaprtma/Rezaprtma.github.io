@@ -1,3 +1,7 @@
+* {
+  box-sizing: border-box;
+}
+
 .jumbotron {
   padding-top: 6rem;
 }
