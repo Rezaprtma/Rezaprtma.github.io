@@ -1,5 +1,7 @@
 * {
   box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 
 .jumbotron {
@@ -8,6 +10,10 @@
 
 .jumbotron h1 {
   font-family: FrizQuuBol;
+}
+
+#about {
+  padding-top: 2px;
 }
 
 #projects {
