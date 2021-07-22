@@ -19,6 +19,11 @@
   background-color: #e2edff;
 }
 
+.card:hover {
+  box-shadow: 0 0 17px #eee;
+  transition-delay: 0.2s;
+}
+
 .card-body {
   background-color: #aeb0b6;
 }
@@ -35,4 +40,9 @@ a {
 }
 .form-svg {
   width: 100%;
+}
+
+#instagram,
+#github {
+  cursor: pointer;
 }
