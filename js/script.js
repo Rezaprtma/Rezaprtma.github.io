@@ -8,7 +8,7 @@
 //   close();
 // }
 
-Link Instagram
+// Link Instagram
 var instagram = document.getElementById("instagram").addEventListener("click", tampilkanAlertInstagram);
 function tampilkanAlertInstagram() {
   var tes = confirm("Anda yakin ingin mengunjungi instagram?");
@@ -35,10 +35,12 @@ function tampilkanAlertGithub() {
 // menutub tab
 function countdown() {
   var i = document.getElementById("counter");
-  i.innerHTML = parseInt(i.innerHTML)-1;
+  i.innerHTML = parseInt(i.innerHTML) - 1;
   if (parseInt(i.innerHTML) <= 0) {
     window.close();
   }
 }
 
-setInterval(function () { countdown(); }, 1000);
+setInterval(function () {
+  countdown();
+}, 1000);
