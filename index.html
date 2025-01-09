@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+
 <html lang="en">
   <head>
     <!-- Required meta tags -->
@@ -11,14 +11,18 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.0/font/bootstrap-icons.css" />
     <!-- My CSS -->
     <link rel="stylesheet" href="css/style.css" />
+    <!-- jquery -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
 
-    <title>My Portfolio | Reza</title>
+    <title>My Portfolio | Novian Reza</title>
   </head>
   <body id="home">
+    <div class="loader">Loading...</div>
+
     <!-- Navbar -->
     <nav class="navbar navbar-expand-lg navbar-dark shadow-lg fixed-top" style="background-color: #45415e">
       <div class="container">
-        <a class="navbar-brand" href="#home">Reza</a>
+        <a class="navbar-brand" href="#">Reza</a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
@@ -36,9 +40,8 @@
 
     <!-- Jumbotron -->
     <section class="jumbotron text-center" style="background-color: #dde2e3">
-      <img src="img/hero.jpg" alt="Reza" width="200px" style="border: 6px solid #5c6272; border-radius: 50%; box-shadow: 0 0 10px 3px #9aacb8" class="" />
+      <img src="img/hero.jpeg" alt="Reza" width="240px" style="border: 10px solid #5c6272; border-radius: 50%; box-shadow: 0 0 15px 3px #9aacb8" class="" />
       <h1 class="display-4">Novian Reza</h1>
-      <p class="lead">Student Lampung</p>
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
         <path
           fill="#9aacb8"
@@ -54,13 +57,15 @@
       <div class="container">
         <div class="row text-center">
           <div class="col mb-5">
-            <h2 style="color: white; text-shadow: 1.5px 1.5px 2px white">About Me</h2>
+            <h2 style="color: white; text-shadow: 1.5px 1.5px 2px white"><ins>About Me</ins></h2>
           </div>
-          <div class="row justify-content-center fs-5 text-center" style="color: rgb(214, 214, 214)">
+          <div class="row justify-content-center fs-5 text-center" style="color: rgb(230,230,230)">
             <div class="col-md-4 mb-3">
-              <p><span id="counter">10</span>detik(s)</p>
+              <p>
+                Hello My Name is Novian Reza Pratama. I was born in Metro city, Lampung, Indonesia
+              </p>
             </div>
-            <div class="col-md-4">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nisi reprehenderit dolor dolores totam modi nihil id nostrum explicabo, quae excepturi blanditiis. Unde, deserunt optio reiciendis cum.</div>
+            <div class="col-md-4">I'm 17 years old</div>
           </div>
         </div>
       </div>
@@ -79,49 +84,62 @@
       <div class="container text-center">
         <div class="row justify-content-center">
           <div class="col mb-5">
-            <h2 style="color: white; text-shadow: 1.5px 1.5px 2px white">My Projects</h2>
+            <h2 style="color: white; text-shadow: 1.5px 1.5px 2px white"><ins>My Projects</ins></h2>
           </div>
           <div class="row">
-            <div class="col-md-4 mb-3">
+            <div class="col-md-4 mb-3"k>
               <div class="card">
-                <img src="img/projects/edit.jpg" class="card-img-top img-fluid" alt="projects-1" />
-                <a href="#home"
+                <img src="img/projects/Project1.png" class="card-img-top img-fluid" alt="projects-1" />
+                <a href="https://rezaprtma.github.io/Eviana-Salon" target="blank" 
                   ><div class="card-body">
-                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                    <h6 class="card-text" style="color: black">Eviana Salon Project</h6>
+                    <p class="card-text" style="color: black">I made this website for the salon needs of my sister</p>
                   </div></a
                 >
               </div>
             </div>
             <div class="col-md-4 mb-3">
               <div class="card">
-                <img src="img/projects/edit.jpg" class="card-img-top img-fluid" alt="projects-1" />
-                <div class="card-body">
-                  <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                </div>
+                <img src="img/projects/Project2.png" class="card-img-top img-fluid" alt="projects-1" />
+                <a href="https://Novianreza.github.io" target="blank" 
+                  ><div class="card-body">
+                    <h6 class="card-text" style="color: black">My Project Profile</h6>
+                    <p class="card-text" style="color: black">I made this website because I have a lot of free time</p>
+                  </div></a
+                >
               </div>
             </div>
             <div class="col-md-4 mb-3">
               <div class="card">
-                <img src="img/projects/edit.jpg" class="card-img-top img-fluid" alt="projects-1" />
-                <div class="card-body">
-                  <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                </div>
+                <img src="img/projects/edit.jpeg" class="card-img-top img-fluid" alt="projects-1" />
+                <a href="#home"
+                  ><div class="card-body">
+                    <h6 class="card-text" style="color: black">Coming Soon</h6>
+                    <p class="card-text" style="color: black">Some quick example text to build on the card title</p>
+                  </div></a
+                >
               </div>
             </div>
             <div class="col-md-4 mb-3">
               <div class="card">
-                <img src="img/projects/edit.jpg" class="card-img-top img-fluid" alt="projects-1" />
-                <div class="card-body">
-                  <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                </div>
+                <img src="img/projects/edit.jpeg" class="card-img-top img-fluid" alt="projects-1" />
+                <a href="#home"
+                  ><div class="card-body">
+                    <h6 class="card-text" style="color: black">Coming Soon</h6>
+                    <p class="card-text" style="color: black">Some quick example text to build on the card title</p>
+                  </div></a
+                >
               </div>
             </div>
             <div class="col-md-4 mb-3">
               <div class="card">
-                <img src="img/projects/edit.jpg" class="card-img-top img-fluid" alt="projects-1" />
-                <div class="card-body">
-                  <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                </div>
+                <img src="img/projects/edit.jpeg" class="card-img-top img-fluid" alt="projects-1" />
+                <a href="#home"
+                  ><div class="card-body">
+                    <h6 class="card-text" style="color: black">Coming Soon</h6>
+                    <p class="card-text" style="color: black">Some quick example text to build on the card title</p>
+                  </div></a
+                >
               </div>
             </div>
           </div>
@@ -142,13 +160,13 @@
       <div class="container">
         <div class="row text-center mb-3">
           <div class="col">
-            <h2 style="color: white; text-shadow: 1.5px 1.5px 2px white">Contact Me</h2>
+            <h2 style="color: white; text-shadow: 1.5px 1.5px 2px white"><ins>Contact Me</ins></h2>
           </div>
         </div>
         <div class="row justify-content-center">
           <div class="col-md-8">
             <div class="alert alert-success alert-dismissible fade show d-none my-alert" role="alert">
-              <strong>Terima kasih!</strong> Pesan anda telah kami terima.
+              <strong>Terima kasih!</strong> I have received your message.
               <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
             </div>
             <form name="contact-form">
@@ -172,14 +190,15 @@
           </div>
         </div>
       </div>
+      <svg style="background-color: #3c455c" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
+        <path
+          fill="#2f3441"
+          fill-opacity="1"
+          d="M0,160L40,133.3C80,107,160,53,240,58.7C320,64,400,128,480,160C560,192,640,192,720,170.7C800,149,880,107,960,117.3C1040,128,1120,192,1200,218.7C1280,245,1360,235,1400,229.3L1440,224L1440,320L1400,320C1360,320,1280,320,1200,320C1120,320,1040,320,960,320C880,320,800,320,720,320C640,320,560,320,480,320C400,320,320,320,240,320C160,320,80,320,40,320L0,320Z"
+        ></path>
+      </svg>
     </section>
-    <svg style="background-color: #3c455c" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
-      <path
-        fill="#2f3441"
-        fill-opacity="1"
-        d="M0,160L40,133.3C80,107,160,53,240,58.7C320,64,400,128,480,160C560,192,640,192,720,170.7C800,149,880,107,960,117.3C1040,128,1120,192,1200,218.7C1280,245,1360,235,1400,229.3L1440,224L1440,320L1400,320C1360,320,1280,320,1200,320C1120,320,1040,320,960,320C880,320,800,320,720,320C640,320,560,320,480,320C400,320,320,320,240,320C160,320,80,320,40,320L0,320Z"
-      ></path>
-    </svg>
+
     <!-- Akhir Contact -->
 
     <!-- footer -->
@@ -193,6 +212,7 @@
 
     <!-- My Script -->
     <script src="js/script.js"></script>
+    <script src="js/close.js"></script>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js" integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0" crossorigin="anonymous"></script>
     <script>
@@ -220,6 +240,9 @@
             console.log("Success!", response);
           })
           .catch((error) => console.error("Error!", error.message));
+      });
+      $(document).ready(function () {
+        $(".loader").hide();
       });
     </script>
   </body>
