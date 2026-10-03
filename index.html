@@ -1,249 +1,330 @@
-
+<!DOCTYPE html>
 <html lang="en">
-  <head>
-    <!-- Required meta tags -->
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="Novian Reza Pratama — Informatics Engineering Student & Web Developer. Building digital experiences through code and creativity." />
+  <meta property="og:title" content="Novian Reza Pratama — Developer Portfolio" />
+  <meta property="og:description" content="Informatics Engineering Student & Web Developer. Building digital experiences through code and creativity." />
+  <meta property="og:type" content="website" />
+  <title>Novian Reza Pratama — Developer Portfolio</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
 
-    <!-- Bootstrap CSS -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous" />
-    <!-- Bootstrap Icon -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.0/font/bootstrap-icons.css" />
-    <!-- My CSS -->
-    <link rel="stylesheet" href="css/style.css" />
-    <!-- jquery -->
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+  <div class="cursor-dot" aria-hidden="true"></div>
+  <div class="cursor-circle" aria-hidden="true"></div>
 
-    <title>My Portfolio | Novian Reza</title>
-  </head>
-  <body id="home">
-    <div class="loader">Loading...</div>
+  <nav class="navbar" id="navbar">
+    <div class="nav-container">
+      <a href="#hero" class="nav-brand">NR</a>
+      <div class="nav-links" id="navLinks">
+        <a href="#about" class="nav-link">About</a>
+        <a href="#stack" class="nav-link">Stack</a>
+        <a href="#work" class="nav-link">Work</a>
+        <a href="#journey" class="nav-link">Journey</a>
+        <a href="#contact" class="nav-link">Contact</a>
+      </div>
+      <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+  </nav>
 
-    <!-- Navbar -->
-    <nav class="navbar navbar-expand-lg navbar-dark shadow-lg fixed-top" style="background-color: #45415e">
-      <div class="container">
-        <a class="navbar-brand" href="#">Reza</a>
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-          <div class="navbar-nav ms-auto">
-            <a class="nav-link active p5" aria-current="page" href="#home">Home</a>
-            <a class="nav-link p5" href="#about">About</a>
-            <a class="nav-link p5" href="#projects">Projects</a>
-            <a class="nav-link p5" href="#contact">Contact</a>
-          </div>
+  <div class="mobile-menu" id="mobileMenu">
+    <div class="mobile-menu-content">
+      <a href="#about" class="mobile-link">About</a>
+      <a href="#stack" class="mobile-link">Stack</a>
+      <a href="#work" class="mobile-link">Work</a>
+      <a href="#journey" class="mobile-link">Journey</a>
+      <a href="#contact" class="mobile-link">Contact</a>
+      <div class="mobile-menu-footer">
+        <a href="https://github.com/Rezaprtma" target="_blank" rel="noopener noreferrer">GitHub</a>
+        <a href="https://instagram.com/pendiam__" target="_blank" rel="noopener noreferrer">Instagram</a>
+      </div>
+    </div>
+  </div>
+
+  <section id="hero" class="hero">
+    <div class="hero-content">
+      <div class="hero-text">
+        <p class="hero-greeting mono">Hello, I'm</p>
+        <h1 class="hero-name">
+          <span class="hero-name-line">Novian</span>
+          <span class="hero-name-line">Reza <span class="accent">Pratama</span></span>
+        </h1>
+        <p class="hero-role">Informatics Engineering Student<br />&amp; <span class="typing-text"></span><span class="typing-cursor">|</span></p>
+        <p class="hero-desc">I build clean and functional digital experiences through code and creativity.</p>
+        <div class="hero-cta">
+          <a href="#work" class="btn-primary magnetic-btn">View Projects</a>
+          <a href="#contact" class="btn-secondary magnetic-btn">Contact Me</a>
         </div>
       </div>
-    </nav>
-    <!-- Akhir Navbar -->
-
-    <!-- Jumbotron -->
-    <section class="jumbotron text-center" style="background-color: #dde2e3">
-      <img src="img/hero.jpeg" alt="Reza" width="240px" style="border: 10px solid #5c6272; border-radius: 50%; box-shadow: 0 0 15px 3px #9aacb8" class="" />
-      <h1 class="display-4">Novian Reza</h1>
-      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
-        <path
-          fill="#9aacb8"
-          fill-opacity="1"
-          d="M0,160L40,160C80,160,160,160,240,160C320,160,400,160,480,170.7C560,181,640,203,720,192C800,181,880,139,960,133.3C1040,128,1120,160,1200,149.3C1280,139,1360,85,1400,58.7L1440,32L1440,320L1400,320C1360,320,1280,320,1200,320C1120,320,1040,320,960,320C880,320,800,320,720,320C640,320,560,320,480,320C400,320,320,320,240,320C160,320,80,320,40,320L0,320Z"
-        ></path>
-      </svg>
-    </section>
-    <!-- Akhir Jumbotron -->
-
-    <!-- About -->
-    <section id="about" style="background-color: #9aacb8">
-      <div class="container">
-        <div class="row text-center">
-          <div class="col mb-5">
-            <h2 style="color: white; text-shadow: 1.5px 1.5px 2px white"><ins>About Me</ins></h2>
-          </div>
-          <div class="row justify-content-center fs-5 text-center" style="color: rgb(230,230,230)">
-            <div class="col-md-4 mb-3">
-              <p>
-                Hello My Name is Novian Reza Pratama. I was born in Metro city, Lampung, Indonesia
-              </p>
-            </div>
-            <div class="col-md-4">I'm 17 years old</div>
-          </div>
+      <div class="hero-photo">
+        <div class="hero-photo-frame">
+          <img src="img/hero.jpeg" alt="Novian Reza Pratama" />
+        </div>
+        <div class="hero-photo-meta mono">
+          <span>01</span>
+          <span>Web Development</span>
+          <span>Metro, Indonesia</span>
         </div>
       </div>
-      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
-        <path
-          fill="#5c6272"
-          fill-opacity="1"
-          d="M0,32L40,64C80,96,160,160,240,165.3C320,171,400,117,480,80C560,43,640,21,720,42.7C800,64,880,128,960,133.3C1040,139,1120,85,1200,64C1280,43,1360,53,1400,58.7L1440,64L1440,320L1400,320C1360,320,1280,320,1200,320C1120,320,1040,320,960,320C880,320,800,320,720,320C640,320,560,320,480,320C400,320,320,320,240,320C160,320,80,320,40,320L0,320Z"
-        ></path>
-      </svg>
-    </section>
-    <!-- Akhir About -->
+    </div>
+    <div class="scroll-indicator" aria-hidden="true">
+      <span class="mono">scroll</span>
+      <div class="scroll-line"></div>
+    </div>
+  </section>
 
-    <!-- Project -->
-    <section id="projects" style="background-color: #5c6272">
-      <div class="container text-center">
-        <div class="row justify-content-center">
-          <div class="col mb-5">
-            <h2 style="color: white; text-shadow: 1.5px 1.5px 2px white"><ins>My Projects</ins></h2>
-          </div>
-          <div class="row">
-            <div class="col-md-4 mb-3"k>
-              <div class="card">
-                <img src="img/projects/Project1.png" class="card-img-top img-fluid" alt="projects-1" />
-                <a href="https://rezaprtma.github.io/Eviana-Salon" target="blank" 
-                  ><div class="card-body">
-                    <h6 class="card-text" style="color: black">Eviana Salon Project</h6>
-                    <p class="card-text" style="color: black">I made this website for the salon needs of my sister</p>
-                  </div></a
-                >
-              </div>
+  <section id="about" class="section section-about">
+    <div class="container">
+      <div class="section-label mono reveal">01 — About</div>
+      <div class="about-grid">
+        <div class="about-text reveal">
+          <h2 class="section-heading">I turn ideas into<br />digital experiences.</h2>
+          <p>I'm Novian Reza Pratama, an Informatics Engineering student with a passion for web development. Based in Metro, Lampung, Indonesia, I enjoy building websites that are both functional and visually engaging.</p>
+          <p>I'm driven by curiosity and a desire to keep learning. Every project is an opportunity to grow, experiment with new technologies, and create something meaningful.</p>
+        </div>
+        <div class="about-meta reveal">
+          <div class="meta-block">
+            <div class="meta-item">
+              <span class="meta-label mono">Based in</span>
+              <span class="meta-value">Metro, Lampung</span>
             </div>
-            <div class="col-md-4 mb-3">
-              <div class="card">
-                <img src="img/projects/Project2.png" class="card-img-top img-fluid" alt="projects-1" />
-                <a href="https://Novianreza.github.io" target="blank" 
-                  ><div class="card-body">
-                    <h6 class="card-text" style="color: black">My Project Profile</h6>
-                    <p class="card-text" style="color: black">I made this website because I have a lot of free time</p>
-                  </div></a
-                >
-              </div>
+            <div class="meta-item">
+              <span class="meta-label mono">Focus</span>
+              <span class="meta-value">Web Development</span>
             </div>
-            <div class="col-md-4 mb-3">
-              <div class="card">
-                <img src="img/projects/edit.jpeg" class="card-img-top img-fluid" alt="projects-1" />
-                <a href="#home"
-                  ><div class="card-body">
-                    <h6 class="card-text" style="color: black">Coming Soon</h6>
-                    <p class="card-text" style="color: black">Some quick example text to build on the card title</p>
-                  </div></a
-                >
-              </div>
+            <div class="meta-item">
+              <span class="meta-label mono">Stack</span>
+              <span class="meta-value">PHP · JS · MySQL</span>
             </div>
-            <div class="col-md-4 mb-3">
-              <div class="card">
-                <img src="img/projects/edit.jpeg" class="card-img-top img-fluid" alt="projects-1" />
-                <a href="#home"
-                  ><div class="card-body">
-                    <h6 class="card-text" style="color: black">Coming Soon</h6>
-                    <p class="card-text" style="color: black">Some quick example text to build on the card title</p>
-                  </div></a
-                >
-              </div>
-            </div>
-            <div class="col-md-4 mb-3">
-              <div class="card">
-                <img src="img/projects/edit.jpeg" class="card-img-top img-fluid" alt="projects-1" />
-                <a href="#home"
-                  ><div class="card-body">
-                    <h6 class="card-text" style="color: black">Coming Soon</h6>
-                    <p class="card-text" style="color: black">Some quick example text to build on the card title</p>
-                  </div></a
-                >
-              </div>
+            <div class="meta-item">
+              <span class="meta-label mono">Status</span>
+              <span class="meta-value"><span class="status-dot"></span> Learning & Building</span>
             </div>
           </div>
         </div>
       </div>
-      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
-        <path
-          fill="#3c455c"
-          fill-opacity="1"
-          d="M0,256L40,240C80,224,160,192,240,197.3C320,203,400,245,480,240C560,235,640,181,720,186.7C800,192,880,256,960,234.7C1040,213,1120,107,1200,96C1280,85,1360,171,1400,213.3L1440,256L1440,320L1400,320C1360,320,1280,320,1200,320C1120,320,1040,320,960,320C880,320,800,320,720,320C640,320,560,320,480,320C400,320,320,320,240,320C160,320,80,320,40,320L0,320Z"
-        ></path>
-      </svg>
-    </section>
-    <!-- Akhir Project -->
+    </div>
+  </section>
 
-    <!-- Contact -->
-    <section id="contact" style="background-color: #3c455c">
-      <div class="container">
-        <div class="row text-center mb-3">
-          <div class="col">
-            <h2 style="color: white; text-shadow: 1.5px 1.5px 2px white"><ins>Contact Me</ins></h2>
+  <section id="stack" class="section section-stack">
+    <div class="container">
+      <div class="section-label mono reveal">02 — Expertise</div>
+      <h2 class="section-heading reveal">Technologies I work with.</h2>
+      <div class="stack-grid">
+        <div class="stack-group reveal">
+          <h3 class="stack-group-title mono">Core</h3>
+          <div class="stack-items">
+            <div class="stack-item">
+              <svg class="stack-icon" viewBox="0 0 24 24" fill="currentColor"><path d="M1.5 0h21l-1.91 21.563L11.977 24l-8.564-2.438L1.5 0zm7.031 9.75l-.232-2.718 10.059.003.071-.757.541-6.03.034-.375H5.745l.156 1.788h8.098l-.328 3.34H8.162l.156 1.749h5.09l-.352 3.956-1.08.292-1.08-.292-.07-.784h-1.77l.126 1.426 2.794.776 2.794-.776.508-5.578H8.531z"/></svg>
+              <span>HTML</span>
+            </div>
+            <div class="stack-item">
+              <svg class="stack-icon" viewBox="0 0 24 24" fill="currentColor"><path d="M1.5 0h21l-1.91 21.563L11.977 24l-8.565-2.438L1.5 0zm17.09 4.413L5.41 4.41l.213 2.622 10.125.002-.255 2.716h-6.64l.24 2.573h6.182l-.366 3.523-2.91.804-2.956-.81-.188-2.11h-2.61l.29 3.855L12 19.002l5.355-1.12.834-9.468z"/></svg>
+              <span>CSS</span>
+            </div>
+            <div class="stack-item">
+              <svg class="stack-icon" viewBox="0 0 24 24" fill="currentColor"><path d="M0 0h24v24H0V0zm22.034 18.276c-.175-1.095-.888-2.015-3.003-2.873-.736-.345-1.554-.585-1.797-1.14-.091-.33-.105-.51-.046-.705.15-.646.915-.84 1.515-.66.39.12.75.42.976.9 1.034-.676 1.034-.676 1.755-1.125-.27-.42-.405-.6-.586-.78-.63-.705-1.469-1.065-2.834-1.034l-.705.089c-.676.165-1.32.525-1.71 1.005-1.14 1.291-.811 3.541.569 4.471 1.365 1.02 3.361 1.244 3.616 2.205.24 1.17-.87 1.545-1.966 1.41-.811-.18-1.26-.586-1.755-1.336l-1.83 1.051c.21.48.45.689.81 1.109 1.74 1.756 6.09 1.666 6.871-1.004.029-.09.24-.705.074-1.65l.046.067zm-8.983-7.245h-2.248c0 1.938-.009 3.864-.009 5.805 0 1.232.063 2.363-.138 2.711-.33.689-1.18.601-1.566.48-.396-.196-.597-.466-.83-.855-.063-.105-.11-.196-.127-.196l-1.825 1.125c.305.63.75 1.172 1.324 1.517.855.51 2.004.675 3.207.405.783-.226 1.458-.691 1.811-1.411.51-.93.402-2.07.397-3.346.012-2.054 0-4.109 0-6.179l.004-.056z"/></svg>
+              <span>JavaScript</span>
+            </div>
           </div>
         </div>
-        <div class="row justify-content-center">
-          <div class="col-md-8">
-            <div class="alert alert-success alert-dismissible fade show d-none my-alert" role="alert">
-              <strong>Terima kasih!</strong> I have received your message.
-              <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+        <div class="stack-group reveal">
+          <h3 class="stack-group-title mono">Exploring</h3>
+          <div class="stack-items">
+            <div class="stack-item">
+              <svg class="stack-icon" viewBox="0 0 24 24" fill="currentColor"><path d="M7.01 10.207h-.944l-.515 2.648h.838c.556 0 .97-.105 1.242-.314.272-.21.455-.559.55-1.049.092-.47.05-.802-.124-.995-.175-.193-.523-.29-1.047-.29zM0 0v24h24V0H0zm14.406 6.075l-.452 1.322h2.36l-.736 2.27h-2.36l-.55 2.648h2.905L15.12 13.64H9.34l1.87-7.564h5.196zm-7.764 7.564l1.242-5.1H6.21l.424-2.464h5.158l-1.87 7.564H6.642z"/></svg>
+              <span>PHP</span>
             </div>
-            <form name="contact-form">
-              <div class="mb-3">
-                <label for="name" class="form-label" style="color: white">Your name</label>
-                <input type="text" class="form-control" id="name" aria-describedby="name" name="nama" placeholder="Enter Your Name" />
-              </div>
-              <div class="mb-3">
-                <label for="email" class="form-label" style="color: white">Email</label>
-                <input type="email" class="form-control" id="email" aria-describedby="email" name="email" placeholder="Enter Email" />
-              </div>
-              <div class="mb-3"><label for="pesan" class="form-label" style="color: white">Message</label> <textarea class="form-control" id="pesan" rows="3" name="pesan" placeholder="Enter Pesan"></textarea></div>
-
-              <button type="submit" class="btn btn-primary btn-kirim">kirim</button>
-
-              <button class="btn btn-primary btn-loading d-none" type="button" disabled>
-                <span class="spinner-grow spinner-grow-sm" role="status" aria-hidden="true"></span>
-                Loading...
-              </button>
-            </form>
+            <div class="stack-item">
+              <svg class="stack-icon" viewBox="0 0 24 24" fill="currentColor"><path d="M11.77 11.24H9.956V8.202h2.152c1.17 0 1.834.522 1.834 1.466 0 1.008-.773 1.572-2.174 1.572zm.324 1.206H9.957v3.348h2.231c1.459 0 2.232-.585 2.232-1.685s-.795-1.663-2.326-1.663zM24 11.39v1.218C24 18.075 18.627 24 12 24S0 18.075 0 12.61V11.39C0 5.925 5.373 0 12 0s12 5.925 12 11.39zM17.15 13.18c0-1.606-.985-2.681-2.705-2.921v-.063c1.378-.232 2.317-1.283 2.317-2.634 0-1.924-1.564-3.122-4.088-3.122H7.59v13.12h5.317c2.683 0 4.243-1.26 4.243-3.38z"/></svg>
+              <span>Bootstrap</span>
+            </div>
+            <div class="stack-item">
+              <svg class="stack-icon" viewBox="0 0 24 24" fill="currentColor"><path d="M16.405 5.501c-.115 0-.193.014-.274.033v.013h.014c.054.104.146.18.214.273.054.107.1.214.154.32l.014-.015c.094-.066.14-.172.14-.333-.04-.047-.046-.094-.08-.14-.04-.067-.126-.1-.18-.153zM5.77 18.695h-.927a50.854 50.854 0 00-.27-4.41h-.008l-1.41 4.41H2.45l-1.4-4.41h-.01a72.892 72.892 0 00-.195 4.41H0c.055-1.966.192-3.81.41-5.53h1.15l1.335 4.064h.008l1.347-4.064h1.095c.242 2.015.384 3.86.428 5.53zm4.017-4.08c-.378 2.045-.876 3.533-1.492 4.46-.482.72-1.01 1.08-1.583 1.08-.144 0-.32-.048-.536-.144v-.457c.1.016.207.024.32.024.296 0 .55-.106.762-.32.248-.248.37-.543.37-.884 0-.168-.038-.392-.112-.672L6.7 14.616h.816l.876 3.136c.16.58.24.965.24 1.152 0 .14-.024.28-.072.42l.012.012c.312-.72.594-1.796.843-3.224h.768zm11.098 4.08h-.836l-.023-4.3h-.012l-1.655 4.3h-.66l-1.665-4.3h-.012c-.003 1.052-.023 2.43-.06 4.3h-.776c.05-1.965.19-3.81.412-5.53h1.063l1.57 4.028h.012l1.548-4.028h1.075c.233 2.08.375 3.925.427 5.53zm-6.362-4.27c-.596 0-1.06.256-1.39.77-.327.51-.49 1.2-.49 2.07 0 .868.164 1.558.49 2.07.33.51.794.77 1.39.77.594 0 1.058-.26 1.388-.77.33-.512.494-1.202.494-2.07 0-.87-.164-1.56-.494-2.07-.33-.514-.794-.77-1.388-.77zm0-.46c.82 0 1.478.3 1.974.9.497.6.745 1.392.745 2.38 0 .988-.248 1.78-.745 2.38-.496.6-1.154.9-1.974.9-.82 0-1.48-.3-1.976-.9-.497-.6-.746-1.392-.746-2.38 0-.988.25-1.78.746-2.38.497-.6 1.156-.9 1.976-.9z"/></svg>
+              <span>MySQL</span>
+            </div>
+          </div>
+        </div>
+        <div class="stack-group reveal">
+          <h3 class="stack-group-title mono">Tools</h3>
+          <div class="stack-items">
+            <div class="stack-item">
+              <svg class="stack-icon" viewBox="0 0 24 24" fill="currentColor"><path d="M11.9955.003C5.381.003 0 5.382 0 11.998c0 5.301 3.438 9.8 8.207 11.387.6.111.82-.26.82-.577 0-.286-.011-1.231-.016-2.234-3.338.726-4.043-1.416-4.043-1.416-.546-1.387-1.332-1.756-1.332-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.107-.776.419-1.305.762-1.604-2.665-.305-5.466-1.334-5.466-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222 0 1.606-.014 2.898-.014 3.293 0 .319.216.694.825.576C20.565 21.795 24 17.298 24 11.998 24 5.382 18.612.003 11.9955.003z"/></svg>
+              <span>Git & GitHub</span>
+            </div>
+            <div class="stack-item">
+              <svg class="stack-icon" viewBox="0 0 24 24" fill="currentColor"><path d="M23.15 2.587L18.21.21a1.494 1.494 0 00-1.705.29l-9.46 8.63-4.12-3.128a.999.999 0 00-1.276.057L.327 7.261A1 1 0 00.326 8.74L3.899 12 .326 15.26a1 1 0 00.001 1.479L1.65 17.94a.999.999 0 001.276.057l4.12-3.128 9.46 8.63a1.492 1.492 0 001.704.29l4.942-2.377A1.5 1.5 0 0024 20.06V3.939a1.5 1.5 0 00-.85-1.352zm-5.146 14.861L10.826 12l7.178-5.448v10.896z"/></svg>
+              <span>VS Code</span>
+            </div>
+            <div class="stack-item">
+              <svg class="stack-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="4 17 10 11 4 5"/><line x1="12" y1="19" x2="20" y2="19"/></svg>
+              <span>Terminal</span>
+            </div>
           </div>
         </div>
       </div>
-      <svg style="background-color: #3c455c" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
-        <path
-          fill="#2f3441"
-          fill-opacity="1"
-          d="M0,160L40,133.3C80,107,160,53,240,58.7C320,64,400,128,480,160C560,192,640,192,720,170.7C800,149,880,107,960,117.3C1040,128,1120,192,1200,218.7C1280,245,1360,235,1400,229.3L1440,224L1440,320L1400,320C1360,320,1280,320,1200,320C1120,320,1040,320,960,320C880,320,800,320,720,320C640,320,560,320,480,320C400,320,320,320,240,320C160,320,80,320,40,320L0,320Z"
-        ></path>
-      </svg>
-    </section>
+    </div>
+  </section>
 
-    <!-- Akhir Contact -->
+  <section id="work" class="section section-work">
+    <div class="container">
+      <div class="section-label mono reveal">03 — Selected Work</div>
+      <h2 class="section-heading reveal">Things I've built.</h2>
 
-    <!-- footer -->
-    <footer class="text-white text-center pb-3" style="background-color: #2f3441">
-      <p>Created with <i class="bi bi-heart-fill text-primary"></i> by <b>Novian Reza Pratama</b></p>
+      <div class="project-featured reveal">
+        <a href="https://rezaprtma.github.io/Eviana-Salon" target="_blank" rel="noopener noreferrer" class="project-featured-link" data-cursor="View Project ↗">
+          <div class="project-image-wrap">
+            <img src="img/projects/Project1.png" alt="Eviana Salon — A website built for a local salon business" loading="lazy" />
+          </div>
+          <div class="project-info">
+            <span class="mono project-number">01</span>
+            <h3 class="project-title">Eviana Salon</h3>
+            <p class="project-desc">A website built for a local salon business, designed to showcase services and provide an online presence for the brand.</p>
+            <div class="project-tech">
+              <span class="tech-tag">HTML</span>
+              <span class="tech-tag">CSS</span>
+              <span class="tech-tag">JavaScript</span>
+            </div>
+            <span class="project-link-text mono">View Project <span class="arrow">↗</span></span>
+          </div>
+        </a>
+      </div>
 
-      <a id="instagram" class="link-light" style="padding-right: 20px"><i class="bi bi-instagram"></i></a>
-      <a id="github" class="link-light"><i class="bi bi-github"></i></a>
-    </footer>
-    <!-- Akhir Footer -->
+      <div class="project-secondary reveal">
+        <a href="https://novianreza.github.io" target="_blank" rel="noopener noreferrer" class="project-card" data-cursor="View ↗">
+          <div class="project-card-image">
+            <img src="img/projects/Project2.png" alt="Personal Portfolio — First iteration of my portfolio website" loading="lazy" />
+          </div>
+          <div class="project-card-info">
+            <span class="mono project-number">02</span>
+            <h3 class="project-card-title">Personal Portfolio</h3>
+            <p class="project-card-desc">First iteration of my portfolio website — the starting point of my web development journey.</p>
+            <div class="project-tech">
+              <span class="tech-tag">HTML</span>
+              <span class="tech-tag">CSS</span>
+              <span class="tech-tag">Bootstrap</span>
+            </div>
+            <span class="project-link-text mono">View Project <span class="arrow">↗</span></span>
+          </div>
+        </a>
+      </div>
+    </div>
+  </section>
 
-    <!-- My Script -->
-    <script src="js/script.js"></script>
-    <script src="js/close.js"></script>
+  <section id="journey" class="section section-journey">
+    <div class="container">
+      <div class="section-label mono reveal">04 — Journey</div>
+      <h2 class="section-heading reveal">My development path.</h2>
+      <div class="timeline">
+        <div class="timeline-item reveal">
+          <div class="timeline-marker">
+            <div class="timeline-dot"></div>
+            <div class="timeline-line"></div>
+          </div>
+          <div class="timeline-content">
+            <span class="mono timeline-date">2024</span>
+            <h3 class="timeline-title">Started exploring web development</h3>
+            <p>Began exploring HTML, CSS, and the fundamentals of building for the web.</p>
+          </div>
+        </div>
+        <div class="timeline-item reveal">
+          <div class="timeline-marker">
+            <div class="timeline-dot"></div>
+            <div class="timeline-line"></div>
+          </div>
+          <div class="timeline-content">
+            <span class="mono timeline-date">2025</span>
+            <h3 class="timeline-title">Built first real project</h3>
+            <p>Created Eviana Salon website — my first project built for a real client. Learned JavaScript and started working with frameworks.</p>
+          </div>
+        </div>
+        <div class="timeline-item reveal">
+          <div class="timeline-marker">
+            <div class="timeline-dot"></div>
+          </div>
+          <div class="timeline-content">
+            <span class="mono timeline-date">2026</span>
+            <h3 class="timeline-title">Building better digital experiences</h3>
+            <p>Continuing to learn, build, and grow as a developer. Exploring new technologies and refining my craft.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js" integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0" crossorigin="anonymous"></script>
-    <script>
-      const scriptURL = "https://script.google.com/macros/s/AKfycbzPPU017HJYf93yyRuNyAWJLy6w97E67Yu60RAbeFncYavUm91peY5lMuOOAXlK1pC2dw/exec";
-      const form = document.forms["contact-form"];
-      const btnKirim = document.querySelector(".btn-kirim");
-      const btnLoading = document.querySelector(".btn-loading");
-      const myAlert = document.querySelector(".my-alert");
+  <section id="contact" class="section section-contact">
+    <div class="container">
+      <div class="section-label mono reveal">05 — Contact</div>
+      <div class="contact-content">
+        <div class="contact-text reveal">
+          <h2 class="contact-heading">Have an idea?<br />Let's build it.</h2>
+          <p class="contact-desc">I'm always open to new opportunities, collaborations, and interesting conversations about technology and development.</p>
+          <div class="contact-links">
+            <a href="https://github.com/Rezaprtma" target="_blank" rel="noopener noreferrer" class="contact-link magnetic-btn">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M11.9955.003C5.381.003 0 5.382 0 11.998c0 5.301 3.438 9.8 8.207 11.387.6.111.82-.26.82-.577 0-.286-.011-1.231-.016-2.234-3.338.726-4.043-1.416-4.043-1.416-.546-1.387-1.332-1.756-1.332-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.107-.776.419-1.305.762-1.604-2.665-.305-5.466-1.334-5.466-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222 0 1.606-.014 2.898-.014 3.293 0 .319.216.694.825.576C20.565 21.795 24 17.298 24 11.998 24 5.382 18.612.003 11.9955.003z"/></svg>
+              <span>GitHub</span>
+            </a>
+            <a href="https://instagram.com/pendiam__" target="_blank" rel="noopener noreferrer" class="contact-link magnetic-btn">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/></svg>
+              <span>Instagram</span>
+            </a>
+          </div>
+        </div>
+        <div class="contact-form-wrap reveal">
+          <form name="contact-form" class="contact-form" id="contactForm">
+            <div class="form-group">
+              <label for="name" class="form-label">Name</label>
+              <input type="text" id="name" name="nama" required placeholder="Your name" class="form-input" />
+            </div>
+            <div class="form-group">
+              <label for="email" class="form-label">Email</label>
+              <input type="email" id="email" name="email" required placeholder="your@email.com" class="form-input" />
+            </div>
+            <div class="form-group">
+              <label for="message" class="form-label">Message</label>
+              <textarea id="message" name="pesan" rows="4" required placeholder="Tell me about your idea..." class="form-input form-textarea"></textarea>
+            </div>
+            <button type="submit" class="btn-primary magnetic-btn btn-submit">
+              <span class="btn-text">Send Message</span>
+              <span class="btn-loading">Sending...</span>
+            </button>
+            <div class="form-success" id="formSuccess">
+              <span class="success-icon">✓</span> Message sent successfully!
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
 
-      form.addEventListener("submit", (e) => {
-        e.preventDefault();
-        // ketika submit di click
-        // loading tampil kirim hilang
-        btnLoading.classList.toggle("d-none");
-        btnKirim.classList.toggle("d-none");
-        fetch(scriptURL, { method: "POST", body: new FormData(form) })
-          .then((response) => {
-            // Tampilkan kirim hilangkan loading
-            btnLoading.classList.toggle("d-none");
-            btnKirim.classList.toggle("d-none");
-            // tampilkan alert
-            myAlert.classList.toggle("d-none");
-            // reset form
-            form.reset();
-            console.log("Success!", response);
-          })
-          .catch((error) => console.error("Error!", error.message));
-      });
-      $(document).ready(function () {
-        $(".loader").hide();
-      });
-    </script>
-  </body>
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-content">
+        <div class="footer-brand">
+          <span class="nav-brand">NR</span>
+          <p class="footer-desc">Novian Reza Pratama<br />Informatics Engineering Student & Developer</p>
+        </div>
+        <div class="footer-links">
+          <a href="https://github.com/Rezaprtma" target="_blank" rel="noopener noreferrer">GitHub</a>
+          <a href="https://instagram.com/pendiam__" target="_blank" rel="noopener noreferrer">Instagram</a>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2026 Novian Reza Pratama</p>
+        <p class="mono footer-tag">Built with curiosity.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/script.js"></script>
+</body>
 </html>
