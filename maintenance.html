@@ -1,0 +1,636 @@
+---
+permalink: /
+---
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="This site is temporarily offline for maintenance. We'll be back online shortly." />
+  <meta property="og:title" content="Under Maintenance — Novian Reza Pratama" />
+  <meta property="og:description" content="This site is temporarily offline for maintenance. We'll be back online shortly." />
+  <meta property="og:type" content="website" />
+  <meta property="og:image" content="https://nopian.my.id/img/hero.jpeg" />
+  <title>Under Maintenance — Novian Reza Pratama</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet" />
+  <style>
+    :root {
+      --bg: #F7F7F5;
+      --panel: rgba(255, 255, 255, 0.72);
+      --border: rgba(0, 0, 0, 0.08);
+      --text: #1a1a2e;
+      --muted: #555566;
+      --faint: #8c8c9a;
+      --accent: #2563EB;
+      --accent-hover: #1D4ED8;
+      --green: #16A34A;
+      --font-heading: 'Space Grotesk', sans-serif;
+      --font-body: 'Inter', sans-serif;
+      --font-mono: 'JetBrains Mono', monospace;
+      --ease-out: cubic-bezier(0.16, 1, 0.3, 1);
+      color-scheme: light;
+    }
+
+    *,
+    *::before,
+    *::after {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html,
+    body {
+      min-height: 100%;
+    }
+
+    body {
+      font-family: var(--font-body);
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.6;
+      font-size: 16px;
+      overflow-x: hidden;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+    }
+
+    .mono {
+      font-family: var(--font-mono);
+    }
+
+    .bg {
+      position: fixed;
+      inset: 0;
+      z-index: -1;
+      overflow: hidden;
+    }
+
+    .grid {
+      position: absolute;
+      inset: 0;
+      background-image:
+        linear-gradient(rgba(26, 26, 46, 0.05) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(26, 26, 46, 0.05) 1px, transparent 1px);
+      background-size: 44px 44px;
+      -webkit-mask-image: radial-gradient(ellipse at center, black 0%, transparent 78%);
+      mask-image: radial-gradient(ellipse at center, black 0%, transparent 78%);
+    }
+
+    .orb {
+      position: absolute;
+      border-radius: 50%;
+      filter: blur(70px);
+      opacity: 0.6;
+    }
+
+    .orb-1 {
+      width: 420px;
+      height: 420px;
+      background: #BFDBFE;
+      top: -140px;
+      left: -120px;
+      animation: float-1 22s ease-in-out infinite;
+    }
+
+    .orb-2 {
+      width: 380px;
+      height: 380px;
+      background: #DBEAFE;
+      bottom: -150px;
+      right: -90px;
+      animation: float-2 26s ease-in-out infinite;
+    }
+
+    .orb-3 {
+      width: 260px;
+      height: 260px;
+      background: #E0E7FF;
+      top: 42%;
+      left: 58%;
+      animation: float-3 20s ease-in-out infinite;
+    }
+
+    @keyframes float-1 {
+      50% { transform: translate(70px, 60px) scale(1.12); }
+    }
+
+    @keyframes float-2 {
+      50% { transform: translate(-60px, -50px) scale(1.08); }
+    }
+
+    @keyframes float-3 {
+      50% { transform: translate(-50px, 40px) scale(0.92); }
+    }
+
+    .wrap {
+      width: min(860px, calc(100% - 36px));
+      margin: 0 auto;
+      min-height: 100vh;
+      min-height: 100svh;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .top {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+      padding: 26px 2px;
+    }
+
+    .brand {
+      display: inline-flex;
+      align-items: center;
+      gap: 12px;
+      min-width: 0;
+    }
+
+    .brand-mark {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 38px;
+      height: 38px;
+      border-radius: 11px;
+      background: var(--accent);
+      color: #fff;
+      font-family: var(--font-heading);
+      font-weight: 700;
+      font-size: 0.9rem;
+      letter-spacing: 0.04em;
+      box-shadow: 0 8px 18px rgba(37, 99, 235, 0.28);
+      flex-shrink: 0;
+    }
+
+    .brand-name {
+      font-family: var(--font-heading);
+      font-weight: 600;
+      font-size: 0.95rem;
+      color: var(--text);
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+
+    .badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 9px;
+      padding: 8px 15px;
+      border-radius: 999px;
+      background: rgba(37, 99, 235, 0.08);
+      border: 1px solid rgba(37, 99, 235, 0.2);
+      color: var(--accent);
+      font-family: var(--font-mono);
+      font-size: 0.7rem;
+      font-weight: 500;
+      letter-spacing: 0.13em;
+      text-transform: uppercase;
+      white-space: nowrap;
+      flex-shrink: 0;
+    }
+
+    .badge-dot {
+      position: relative;
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      background: var(--accent);
+      flex-shrink: 0;
+    }
+
+    .badge-dot::after {
+      content: "";
+      position: absolute;
+      inset: -4px;
+      border-radius: 50%;
+      border: 2px solid rgba(37, 99, 235, 0.4);
+      animation: ping 1.8s cubic-bezier(0, 0, 0.2, 1) infinite;
+    }
+
+    @keyframes ping {
+      0% { transform: scale(0.55); opacity: 1; }
+      100% { transform: scale(1.8); opacity: 0; }
+    }
+
+    .panel {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      padding: clamp(44px, 8vw, 88px) clamp(20px, 5vw, 56px);
+      background: var(--panel);
+      border: 1px solid var(--border);
+      border-radius: 28px;
+      -webkit-backdrop-filter: blur(12px);
+      backdrop-filter: blur(12px);
+      box-shadow: 0 24px 60px rgba(26, 26, 46, 0.07);
+    }
+
+    .gears {
+      position: relative;
+      width: 104px;
+      height: 96px;
+      margin-bottom: 26px;
+    }
+
+    .gear {
+      position: absolute;
+      color: var(--accent);
+    }
+
+    .gear-lg {
+      width: 78px;
+      height: 78px;
+      left: 2px;
+      top: 2px;
+      opacity: 0.92;
+      animation: spin 16s linear infinite;
+    }
+
+    .gear-sm {
+      width: 46px;
+      height: 46px;
+      right: 0;
+      bottom: 4px;
+      color: #93C5FD;
+      animation: spin 10s linear infinite reverse;
+    }
+
+    @keyframes spin {
+      to { transform: rotate(360deg); }
+    }
+
+    .eyebrow {
+      font-size: 0.78rem;
+      color: var(--faint);
+      letter-spacing: 0.08em;
+    }
+
+    h1 {
+      font-family: var(--font-heading);
+      font-weight: 700;
+      font-size: clamp(2.1rem, 6.5vw, 3.4rem);
+      line-height: 1.06;
+      letter-spacing: -0.02em;
+      margin: 14px 0 16px;
+    }
+
+    .accent {
+      background: linear-gradient(90deg, var(--accent), #3B82F6 55%, #60A5FA);
+      -webkit-background-clip: text;
+      background-clip: text;
+      color: transparent;
+    }
+
+    .lead {
+      color: var(--muted);
+      max-width: 52ch;
+      font-size: clamp(0.97rem, 2.4vw, 1.06rem);
+    }
+
+    .bar {
+      position: relative;
+      width: min(360px, 100%);
+      height: 6px;
+      margin-top: 30px;
+      border-radius: 999px;
+      background: rgba(37, 99, 235, 0.1);
+      overflow: hidden;
+    }
+
+    .bar-fill {
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      width: 42%;
+      border-radius: 999px;
+      background: linear-gradient(90deg, var(--accent), #60A5FA);
+      animation: slide 2.4s ease-in-out infinite;
+    }
+
+    @keyframes slide {
+      0% { transform: translateX(-115%); }
+      50% { transform: translateX(175%); }
+      100% { transform: translateX(-115%); }
+    }
+
+    .log {
+      list-style: none;
+      width: min(370px, 100%);
+      margin-top: 26px;
+      display: grid;
+      gap: 10px;
+      text-align: left;
+    }
+
+    .log-item {
+      display: flex;
+      align-items: center;
+      gap: 11px;
+      padding: 11px 15px;
+      border-radius: 12px;
+      border: 1px solid var(--border);
+      background: rgba(255, 255, 255, 0.65);
+      font-size: 0.79rem;
+      color: var(--faint);
+      transition: border-color 0.4s ease, background 0.4s ease, color 0.4s ease;
+    }
+
+    .log-item.done {
+      color: var(--muted);
+    }
+
+    .log-item.active {
+      color: var(--text);
+      border-color: rgba(37, 99, 235, 0.35);
+      background: rgba(37, 99, 235, 0.06);
+    }
+
+    .ic {
+      width: 1em;
+      text-align: center;
+      flex-shrink: 0;
+    }
+
+    .ic-check {
+      display: none;
+      color: var(--green);
+      font-weight: 700;
+    }
+
+    .ic-spin {
+      display: none;
+      color: var(--accent);
+      font-size: 1.05em;
+    }
+
+    .ic-idle {
+      display: inline;
+      color: #c7c7d1;
+    }
+
+    .log-item.done .ic-check {
+      display: inline;
+    }
+
+    .log-item.done .ic-idle,
+    .log-item.active .ic-idle {
+      display: none;
+    }
+
+    .log-item.active .ic-spin {
+      display: inline-block;
+      animation: spin 1.4s linear infinite;
+    }
+
+    .note {
+      margin-top: 22px;
+      font-size: 0.73rem;
+      letter-spacing: 0.06em;
+      color: var(--faint);
+    }
+
+    .actions {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 12px;
+      margin-top: 30px;
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      padding: 13px 26px;
+      border-radius: 999px;
+      font-family: var(--font-body);
+      font-size: 0.92rem;
+      font-weight: 600;
+      text-decoration: none;
+      transition: transform 0.3s var(--ease-out), box-shadow 0.3s ease, background 0.3s ease, border-color 0.3s ease;
+    }
+
+    .btn-primary {
+      background: var(--accent);
+      color: #fff;
+      box-shadow: 0 10px 24px rgba(37, 99, 235, 0.26);
+    }
+
+    .btn-primary:hover {
+      background: var(--accent-hover);
+      transform: translateY(-2px);
+      box-shadow: 0 14px 28px rgba(37, 99, 235, 0.32);
+    }
+
+    .btn-ghost {
+      background: #fff;
+      color: var(--text);
+      border: 1px solid var(--border);
+    }
+
+    .btn-ghost:hover {
+      border-color: rgba(0, 0, 0, 0.2);
+      transform: translateY(-2px);
+    }
+
+    .btn:focus-visible {
+      outline: 2px solid var(--accent);
+      outline-offset: 3px;
+    }
+
+    .foot {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 10px;
+      padding: 24px 4px 32px;
+      font-size: 0.84rem;
+      color: var(--faint);
+    }
+
+    .rise {
+      animation: rise 0.85s var(--ease-out) both;
+    }
+
+    @keyframes rise {
+      from {
+        opacity: 0;
+        transform: translateY(20px);
+      }
+      to {
+        opacity: 1;
+        transform: none;
+      }
+    }
+
+    .d1 { animation-delay: 0.05s; }
+    .d2 { animation-delay: 0.12s; }
+    .d3 { animation-delay: 0.2s; }
+    .d4 { animation-delay: 0.28s; }
+    .d5 { animation-delay: 0.36s; }
+    .d6 { animation-delay: 0.44s; }
+    .d7 { animation-delay: 0.52s; }
+    .d8 { animation-delay: 0.6s; }
+    .d9 { animation-delay: 0.68s; }
+
+    @media (max-width: 640px) {
+      .brand-name {
+        display: none;
+      }
+
+      .badge {
+        font-size: 0.62rem;
+        padding: 7px 12px;
+        letter-spacing: 0.1em;
+      }
+
+      .gears {
+        transform: scale(0.88);
+      }
+
+      .foot {
+        justify-content: center;
+        text-align: center;
+      }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      *,
+      *::before,
+      *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="bg" aria-hidden="true">
+    <span class="orb orb-1"></span>
+    <span class="orb orb-2"></span>
+    <span class="orb orb-3"></span>
+    <div class="grid"></div>
+  </div>
+
+  <div class="wrap">
+    <header class="top rise d1">
+      <div class="brand">
+        <span class="brand-mark">NR</span>
+        <span class="brand-name">Novian Reza Pratama</span>
+      </div>
+      <span class="badge">
+        <span class="badge-dot"></span>
+        maintenance in progress
+      </span>
+    </header>
+
+    <main class="panel rise d2">
+      <div class="gears" aria-hidden="true">
+        <svg class="gear gear-lg" viewBox="0 0 100 100">
+          <g fill="currentColor">
+            <rect x="45" y="2" width="10" height="22" rx="3" />
+            <rect x="45" y="2" width="10" height="22" rx="3" transform="rotate(45 50 50)" />
+            <rect x="45" y="2" width="10" height="22" rx="3" transform="rotate(90 50 50)" />
+            <rect x="45" y="2" width="10" height="22" rx="3" transform="rotate(135 50 50)" />
+            <rect x="45" y="2" width="10" height="22" rx="3" transform="rotate(180 50 50)" />
+            <rect x="45" y="2" width="10" height="22" rx="3" transform="rotate(225 50 50)" />
+            <rect x="45" y="2" width="10" height="22" rx="3" transform="rotate(270 50 50)" />
+            <rect x="45" y="2" width="10" height="22" rx="3" transform="rotate(315 50 50)" />
+          </g>
+          <circle cx="50" cy="50" r="28" fill="none" stroke="currentColor" stroke-width="12" />
+        </svg>
+        <svg class="gear gear-sm" viewBox="0 0 100 100">
+          <g fill="currentColor">
+            <rect x="45" y="2" width="10" height="22" rx="3" />
+            <rect x="45" y="2" width="10" height="22" rx="3" transform="rotate(60 50 50)" />
+            <rect x="45" y="2" width="10" height="22" rx="3" transform="rotate(120 50 50)" />
+            <rect x="45" y="2" width="10" height="22" rx="3" transform="rotate(180 50 50)" />
+            <rect x="45" y="2" width="10" height="22" rx="3" transform="rotate(240 50 50)" />
+            <rect x="45" y="2" width="10" height="22" rx="3" transform="rotate(300 50 50)" />
+          </g>
+          <circle cx="50" cy="50" r="28" fill="none" stroke="currentColor" stroke-width="12" />
+        </svg>
+      </div>
+
+      <p class="eyebrow mono rise d3">// status : updating</p>
+      <h1 class="rise d4">We'll be back <span class="accent">soon.</span></h1>
+      <p class="lead rise d5">The site is going through a quick round of improvements. Everything will be back online shortly — thank you for your patience.</p>
+
+      <div class="bar rise d6" aria-hidden="true">
+        <span class="bar-fill"></span>
+      </div>
+
+      <ul class="log mono rise d7" aria-hidden="true">
+        <li class="log-item done">
+          <span class="ic ic-check">&#10003;</span>
+          <span class="ic ic-spin">&#8635;</span>
+          <span class="ic ic-idle">&#9675;</span>
+          <span>backing up content</span>
+        </li>
+        <li class="log-item done">
+          <span class="ic ic-check">&#10003;</span>
+          <span class="ic ic-spin">&#8635;</span>
+          <span class="ic ic-idle">&#9675;</span>
+          <span>optimizing assets</span>
+        </li>
+        <li class="log-item active">
+          <span class="ic ic-check">&#10003;</span>
+          <span class="ic ic-spin">&#8635;</span>
+          <span class="ic ic-idle">&#9675;</span>
+          <span>rebuilding pages</span>
+        </li>
+        <li class="log-item">
+          <span class="ic ic-check">&#10003;</span>
+          <span class="ic ic-spin">&#8635;</span>
+          <span class="ic ic-idle">&#9675;</span>
+          <span>deploying updates</span>
+        </li>
+      </ul>
+
+      <p class="note mono rise d8">estimated downtime — a few minutes</p>
+
+      <div class="actions rise d9">
+        <a class="btn btn-primary" href="https://github.com/Rezaprtma" target="_blank" rel="noopener noreferrer">GitHub</a>
+        <a class="btn btn-ghost" href="https://instagram.com/pendiam__" target="_blank" rel="noopener noreferrer">Instagram</a>
+      </div>
+    </main>
+
+    <footer class="foot rise d9">
+      <span>&copy; 2026 Novian Reza Pratama</span>
+      <span class="mono">Built with curiosity.</span>
+    </footer>
+  </div>
+
+  <script>
+    (function () {
+      "use strict";
+
+      var items = document.querySelectorAll(".log-item");
+      if (!items.length) return;
+      if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) return;
+
+      var active = 2;
+
+      setInterval(function () {
+        active = (active + 1) % items.length;
+        for (var i = 0; i < items.length; i++) {
+          items[i].classList.toggle("done", i < active);
+          items[i].classList.toggle("active", i === active);
+        }
+      }, 2400);
+    })();
+  </script>
+</body>
+</html>
